@@ -27,6 +27,10 @@ func New(cfg *config.Config) *sql.DB {
 		log.Fatal(err)
 	}
 
+	if err := RunMigrations(db); err != nil {
+		log.Fatal(err)
+	}
+
 	log.Println("✅ Connected to DB")
 	return db
 }
