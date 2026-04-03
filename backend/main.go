@@ -18,10 +18,10 @@ type User struct {
 var db *sql.DB
 
 func createDB() string {
-	dbHost := "testdb.ctcoe8e0aiiq.ap-southeast-1.rds.amazonaws.com:3306"
-	dbUser := "root"
-	dbPass := "password"
-	dbName := "testdb"
+	dbHost := ""
+	dbUser := ""
+	dbPass := ""
+	dbName := ""
 
 	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true&charset=utf8mb4&loc=Local",
 		dbUser, dbPass, dbHost, dbName,
