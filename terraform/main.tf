@@ -33,8 +33,10 @@ module "database" {
 module "compute" {
   source            = "./modules/compute"
   security_group_id = module.security.ec2_sg_id
+  security_ssm_group_id = module.security.ec2_sg_ssm_id
   ami               = "ami-0c0292c4186d3d1ec"
   subnet_id         = module.network.private_subnet_ids[0]
+  instance_profile_name = module.iam.instance_profile_name
 }
 
 module "alb" {
@@ -44,4 +46,8 @@ module "alb" {
   security_group_id = module.security.alb_sg_id
   vpc_id            = module.network.vpc_id
   instance_id       = module.compute.instance_id
+}
+
+module "iam" {
+  source = "./modules/iam"
 }

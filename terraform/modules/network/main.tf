@@ -70,7 +70,7 @@ resource "aws_route_table_association" "public_association" {
 
 // EIP
 resource "aws_eip" "nat" {
-
+  domain = "vpc"
 }
 
 // NAT
@@ -83,6 +83,8 @@ resource "aws_nat_gateway" "public" {
     Name = "public NAT"
   }
 }
+
+
 
 // Route table - PRIVATE
 resource "aws_route_table" "private" {
