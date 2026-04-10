@@ -13,3 +13,12 @@ variable "subnet_id" {
 variable "security_group_id" {
   description = "EC2 security group"
 }
+
+variable "security_ssm_group_id" {
+  description = "EC2 security group"
+}
+
+
+variable "instance_profile_name" {
+  description = "Profile Name"
+}
