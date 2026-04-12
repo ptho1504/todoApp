@@ -24,9 +24,9 @@ module "database" {
   subnet_ids        = module.network.private_subnet_ids
   security_group_id = module.security.rds_sg_id
 
-  db_name  = "testdb"
-  username = "admin"
-  password = "password"
+  db_name  = var.db_name
+  username = var.db_username
+  password = var.db_password
 }
 
 
