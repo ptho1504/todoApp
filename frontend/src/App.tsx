@@ -87,15 +87,16 @@ export default function UserPage() {
 /* ------------------ Components ------------------ */
 
 function UserList({ users }: { users: User[] }) {
-  if (!users.length) return <p>No users found</p>;
+  if (users != null && !users.length) return <p>No users found</p>;
 
   return (
     <ul style={styles.list}>
-      {users.map((u) => (
-        <li key={u.id} style={styles.listItem}>
-          {u.name}
-        </li>
-      ))}
+      {users != null &&
+        users.map((u) => (
+          <li key={u.id} style={styles.listItem}>
+            {u.name}
+          </li>
+        ))}
     </ul>
   );
 }
