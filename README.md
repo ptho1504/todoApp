@@ -66,11 +66,5 @@ terraform plan
 terraform apply
 ```
 
-## 📚 What You'll Learn
-
-- **VPC** — private networking, subnets, security groups
-- **EC2** — virtual machines, user data scripts, key pairs
-- **RDS** — managed MySQL, private subnet placement
-- **Terraform modules** — reusable infra components
-- **Outputs & Variables** — passing values between modules
-# todoApp
+## Architect
+![alt text](img/image.png)
